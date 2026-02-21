@@ -2,15 +2,11 @@
     Choose pizza toppings
 </h1>
 <ul>
-    <li>
-        Pepperoni ($3.50)
-    </li>
-    <li>
-        Saussage ($4.25)
-    </li>
-    <li>
-        Extra Cheese ($0.99)
-    </li>
+    @for (topping of availablePizzaToppings(); track topping) {
+        <li>
+            {{ topping.name }} ({{ topping.price }})
+        </li>
+    }
 </ul>
 
 <h2>
