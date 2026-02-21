@@ -1,5 +1,5 @@
 import { Component, computed, inject, signal } from '@angular/core';
-import { PizzaService } from '../pizza.service';
+import { PizzaService, PizzaTopping } from '../pizza.service';
 import { CurrencyPipe } from '@angular/common';
 
 @Component({
@@ -28,6 +28,17 @@ export class PizzaToppings {
       .reduce(
         (acc, x) => acc + x.price,
         0,
+      )
+  );
+
+  protected readonly toggleTopping = (topping: PizzaTopping) => this.availablePizzaToppings.update(
+    toppings => toppings.map(
+      t => t === topping 
+        ? { 
+            ...t, 
+            checked: !t.checked, 
+        } 
+        : t
       )
   );
 }

@@ -8,6 +8,7 @@
             <input 
                 type="checkbox"
                 [checked]="topping.checked"
+                (change)="toggleTopping(topping)"
             >
             {{ topping.name }} ({{ topping.price | currency }})
         </label>
