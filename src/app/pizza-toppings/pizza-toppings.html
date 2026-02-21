@@ -4,10 +4,12 @@
 
 @for (topping of availablePizzaToppings(); track topping) {
     <div>
-        <input 
-            type="checkbox"
-        />
-        {{ topping.name }} ({{ topping.price | currency }})
+        <label>
+            <input 
+                type="checkbox"
+            >
+            {{ topping.name }} ({{ topping.price | currency }})
+        </label>
     </div>
 }
 
