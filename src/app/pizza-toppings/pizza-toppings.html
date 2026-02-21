@@ -4,7 +4,7 @@
 <ul>
     @for (topping of availablePizzaToppings(); track topping) {
         <li>
-            {{ topping.name }} ({{ topping.price }})
+            {{ topping.name }} ({{ topping.price | currency }})
         </li>
     }
 </ul>
