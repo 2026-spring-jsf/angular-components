@@ -7,6 +7,7 @@
         <label>
             <input 
                 type="checkbox"
+                [checked]="topping.checked"
             >
             {{ topping.name }} ({{ topping.price | currency }})
         </label>

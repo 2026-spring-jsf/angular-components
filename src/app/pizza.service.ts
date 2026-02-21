@@ -28,7 +28,7 @@ export class PizzaService {
     const pizzaToppingsWithCheckedState = dummyToppingsFromApi.map(
       x => ({
         ...x,
-        checked: false,
+        checked: true,
       })
     );
 
