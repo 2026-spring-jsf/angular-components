@@ -13,7 +13,7 @@ const dummyToppingsFromApi = [
  },
  {
   name: 'Sausage',
-  price: 3.50,
+  price: 4.00,
  },
  {
   name: 'Extra Cheese',
