@@ -7,7 +7,9 @@
    <div>
         <label>
         <input
-        type="checkbox"
+          type="checkbox"
+          [checked]="t.checked"
+          (change)="toggleTopping(t)"
         />
         {{t.name}} ({{t.price | currency}})
         </label>
