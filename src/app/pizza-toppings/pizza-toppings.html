@@ -1,9 +1,10 @@
 <h2>Choose your pizza toppings</h2>
 
-@for (t of availablePizzaToppings(); track t) {
+
+@for (t of availablePizzaToppings(); track t.name) {
   <div>
     <label>
-        ({t.name}) ({t.price | currency})
+        ({{t.name}}) ({{t.price | currency}})
         <input 
             type="checkbox"
             [checked]="t.checked"
@@ -12,3 +13,6 @@
     </label>
   </div>
 }
+
+
+<p>Total: {{ total() | currency }}</p>
