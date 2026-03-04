@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { PizzaService } from '../pizza.service';
+import { PizzaService, PizzaTopping } from '../pizza.service';
 import { CurrencyPipe } from '@angular/common'; 
 
 @Component({
@@ -11,4 +11,5 @@ import { CurrencyPipe } from '@angular/common';
 export class PizzaToppings {
   private readonly pizzaSvc = inject(PizzaService);
   protected readonly availablePizzaToppings = signal(this.pizzaSvc.getToppings());
-}
+
+  protected readonly toggleTopping = (t: PizzaTopping) => this.availablePizzaToppings.update(prev => prev.map(x => x === t ? { ...x, checked: !x.checked } : x));}

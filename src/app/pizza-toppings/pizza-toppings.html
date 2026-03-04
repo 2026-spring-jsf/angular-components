@@ -1,7 +1,7 @@
 <h2>pick your toppings</h2>
 @for (t of availablePizzaToppings(); track t) {
     <div>
-        <input type="checkbox" id="{{t.name}}">
+        <input type="checkbox" id="{{t.name}}" [checked] = "t.checked" (change)="toggleTopping(t)">
         <label for="{{t.name}}">{{t.name}}</label>
         <strong>({{t.price | currency}})</strong>
     </div>
