@@ -3,6 +3,6 @@
     <div>
         <input type="checkbox" id="{{t.name}}">
         <label for="{{t.name}}">{{t.name}}</label>
-        <strong>(${{t.price.toFixed(2)}})</strong>
+        <strong>(${{t.price | currency}})</strong>
     </div>
 }
