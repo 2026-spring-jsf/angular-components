@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
-
+export type PizzaTopping = {
+  name: string;
+  price: number;
+  checked: boolean;
+};
 const dummyToppingsFromApi = [
   { name: 'anchovies', price: 3.50 },
   { name: 'pepperoni', price: 3.50 },
@@ -10,6 +14,6 @@ const dummyToppingsFromApi = [
   providedIn: 'root',
 })
 export class PizzaService {
-  getToppings =() => dummyToppingsFromApi.map(x => ({ ...x, checked: false }));
+  getToppings =(): PizzaTopping[] => dummyToppingsFromApi.map(x => ({ ...x, checked: false }));
   
 }
