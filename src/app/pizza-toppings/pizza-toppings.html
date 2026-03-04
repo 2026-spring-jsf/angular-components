@@ -1,11 +1,7 @@
 <h2>Choose your pizza toppings</h2>
 
-<div>
-  <label>Pepperoni ($2.50)<input type="checkbox" /></label>
-</div>
-<div>
-  <label>Sausage ($3.00)<input type="checkbox" /></label>
-</div>
-<div>
-  <label>Extra Cheese ($1.50)<input type="checkbox" /></label>
-</div>
+@for (t of availablePizzaToppings(); track t) {
+  <div>
+    <label>({t.name}) (${t.price})<input type="checkbox" /></label>
+  </div>
+}
