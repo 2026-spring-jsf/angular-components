@@ -2,6 +2,6 @@
 
 @for (t of availablePizzaToppings(); track t) {
   <div>
-    <label>({t.name}) (${t.price})<input type="checkbox" /></label>
+    <label>({t.name}) ({t.price | currency})<input type="checkbox" /></label>
   </div>
 }
