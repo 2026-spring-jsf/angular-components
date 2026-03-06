@@ -13,8 +13,10 @@
                 Number One
             </mat-label>
             <input 
+                type="number"
                 matInput 
                 [value]="numberOne()"
+                (input)="updateNumberOne($event.target.value)" 
             />
         </mat-form-field>
         +
@@ -23,13 +25,16 @@
                 Number Two
             </mat-label>
             <input 
+                type="number"
                 matInput 
                 [value]="numberTwo()"
+                (input)="updateNumberTwo($event.target.value)" 
             />
         </mat-form-field>
         &nbsp;
         <button
             matButton="outlined"
+            (click)="add()"
         >
             =
         </button>

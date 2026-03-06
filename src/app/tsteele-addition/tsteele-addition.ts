@@ -21,4 +21,9 @@ export class TsteeleAddition {
   protected readonly numberTwo = signal(1);
   protected readonly sum = signal(2);
 
+  protected readonly updateNumberOne = (num: string) => this.numberOne.set(Number(num));
+  protected readonly updateNumberTwo = (num: string) => this.numberTwo.set(Number(num));
+
+  protected readonly add = () => this.sum.set(this.numberOne() + this.numberTwo());
+
 }
