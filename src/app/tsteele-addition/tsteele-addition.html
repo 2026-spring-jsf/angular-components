@@ -8,11 +8,29 @@
     </mat-card-header>
     <mat-card-content>
         <br />
-        <input type="number" />
+        <mat-form-field>
+            <mat-label>
+                Number One
+            </mat-label>
+            <input 
+                matInput 
+                value="2"
+            />
+        </mat-form-field>
         +
-        <input type="number" />
+        <mat-form-field>
+            <mat-label>
+                Number Two
+            </mat-label>
+            <input 
+                matInput 
+                value="2"
+            />
+        </mat-form-field>
         &nbsp;
-        <button>
+        <button
+            matButton="outlined"
+        >
             =
         </button>
         &nbsp;
