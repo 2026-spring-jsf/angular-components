@@ -14,7 +14,7 @@
             </mat-label>
             <input 
                 matInput 
-                value="2"
+                [value]="numberOne()"
             />
         </mat-form-field>
         +
@@ -24,7 +24,7 @@
             </mat-label>
             <input 
                 matInput 
-                value="2"
+                [value]="numberTwo()"
             />
         </mat-form-field>
         &nbsp;
@@ -34,6 +34,6 @@
             =
         </button>
         &nbsp;
-        0
+        {{ sum() }}
     </mat-card-content>
 </mat-card>
