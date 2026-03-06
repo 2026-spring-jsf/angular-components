@@ -3,6 +3,7 @@ import { PizzaToppings } from './pizza-toppings/pizza-toppings';
 import { ZsmuckerbryanChecklist } from './zsmuckerbryan-checklist/zsmuckerbryan-checklist';
 import { TsteeleMultiplication } from './tsteele-multiplication/tsteele-multiplication';
 import { CbaresDiceRoll } from './cbares-dice-roll/cbares-dice-roll';
+import { TsteeleAddition } from './tsteele-addition/tsteele-addition';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ import { CbaresDiceRoll } from './cbares-dice-roll/cbares-dice-roll';
     TsteeleMultiplication,
     CbaresDiceRoll,
     ZsmuckerbryanChecklist,
+    TsteeleAddition,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
