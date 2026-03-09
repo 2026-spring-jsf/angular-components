@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -12,6 +12,9 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './cbares-dice-roll.css',
 })
 export class CbaresDiceRoll {
+
+  protected readonly results = signal([0,0]);
+
   protected readonly rollDice = () => {
     console.log('roll button clicked');
   }

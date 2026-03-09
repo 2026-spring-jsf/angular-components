@@ -11,5 +11,12 @@
         >
             Roll
         </button>
+        <div id="diceContainer">
+        @for (roll of results(); track roll) {
+            <div class="die">
+                {{ roll }}
+            </div>
+        }
+    </div>
     </mat-card-content>
 </mat-card>
