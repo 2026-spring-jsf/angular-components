@@ -9,10 +9,10 @@ export type PizzaTopping = {
 const dummyToppingsFromApi = [
   {
     name: 'Pepperroni',
-    price: 3.50,
+    price: 3.5,
   },
   {
-    name: 'Saussage',
+    name: 'Sausage',
     price: 4.25,
   },
   {
@@ -25,24 +25,15 @@ const dummyToppingsFromApi = [
   providedIn: 'root',
 })
 export class PizzaService {
-
   getAvailablePizzaToppings = (): PizzaTopping[] => {
-
     // Make the API call to get the pizza toppings...
 
-
     // Shape them for use in the app...
-    const pizzaToppingsShapedForTheApp = dummyToppingsFromApi
-      .map(
-        x => ({
-          ...x,
-          checked: false,
-        })
-      )
-    ;
-
+    const pizzaToppingsShapedForTheApp = dummyToppingsFromApi.map((x) => ({
+      ...x,
+      checked: false,
+    }));
     // Return the shaped pizza toppings...
     return pizzaToppingsShapedForTheApp;
   };
-  
 }
