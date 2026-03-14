@@ -4,6 +4,15 @@
   </mat-card-header>
 
   <mat-card-content>
+    <button matButton="outlined">
+        All
+    </button>
+    &nbsp;&nbsp;
+    <button matButton="outlined">
+        None
+    </button>
+    <br />
+    <br />
     @for (t of availablePizzaToppings(); track t) {
       <div>
         <label>
@@ -12,7 +21,6 @@
         </label>
       </div>
     }
-
     <h3>Total: {{ total() | currency }}</h3>
   </mat-card-content>
 </mat-card>
