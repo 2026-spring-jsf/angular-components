@@ -1,5 +1,13 @@
-<h2>Choose your pizza toppings...</h2>
-
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>
+        Choose your pizza toppings...
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <button matButton="outlined" (click)="checkAll()">All</button>
+    <button matButton="outlined" (click)="clearAll()">Clear</button>
+    <br/><br/>
 @for (t of availablePizzaToppings(); track t) {
     <div>
         <label>
@@ -16,3 +24,8 @@
 <h3>
     Total: {{ total() | currency }}
 </h3>
+
+
+  </mat-card-content>
+</mat-card>
+

@@ -1,10 +1,16 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { PizzaService, PizzaTopping } from '../pizza.service';
 import { CurrencyPipe } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
+import { MatButton, MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-pizza-toppings',
-  imports: [CurrencyPipe],
+  imports: [
+    CurrencyPipe,
+    MatCardModule,
+    MatButtonModule
+  ],
   templateUrl: './pizza-toppings.html',
   styleUrl: './pizza-toppings.css',
 })
@@ -37,6 +43,24 @@ export class PizzaToppings {
           checked: !x.checked
         }
         : x
+    )
+  );
+
+  protected readonly checkAll = () => this.availablePizzaToppings.update(
+    currentAvailableToppings => currentAvailableToppings.map(
+      topping => ({
+        ...topping,
+        checked: true,
+      })
+    )
+  );
+
+  protected readonly clearAll = () => this.availablePizzaToppings.update(
+    currentAvailableToppings => currentAvailableToppings.map(
+      topping => ({
+        ...topping,
+        checked: false,
+      })
     )
   );
 
