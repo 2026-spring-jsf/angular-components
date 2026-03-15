@@ -7,11 +7,14 @@ appearance="outlined"
   <mat-card-content>
     <button 
     matButton="outlined"
+    (click)="checkAll()"
     >
         All
     </button>
     &nbsp;
-    <button matButton="outlined">
+    <button 
+    matButton="outlined"
+    (click)="unCheckAll()">
         None
     </button>
         @for (t of availablePizzaToppings(); track t) {
