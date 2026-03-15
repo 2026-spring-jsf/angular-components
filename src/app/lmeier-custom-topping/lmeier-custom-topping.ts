@@ -3,6 +3,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatAnchor, MatButtonModule } from "@angular/material/button";
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { PizzaTopping } from '../pizza.service';
 
 @Component({
   selector: 'app-lmeier-custom-topping',
@@ -19,5 +20,10 @@ import { MatInputModule } from '@angular/material/input';
 export class LmeierCustomTopping {
 
     protected readonly customTopping = signal("");
-    protected readonly customToppingList = signal("Custom Topping List");
+
+    protected readonly addTopping = () => this.customToppingList.update(
+        prev => [...prev, this.customTopping()]
+    );
+
+    protected readonly customToppingList = signal<string[]>([]);
 }

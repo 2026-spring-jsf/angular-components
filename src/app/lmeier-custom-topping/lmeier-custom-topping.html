@@ -13,16 +13,26 @@
             <input 
                 matInput
                 [value]= "customTopping()"
+                (input)="customTopping.set($any($event.target).value)"
                 >
   </mat-form-field>
 
         <button
         matButton="elevated"
-        (click)="customTopping()"
+        (click)="addTopping()"
         >
             Add
         </button>
         <br>
-        {{customToppingList()}}
+
+    
+        @for (t of customToppingList(); track t) {
+      <div>
+        <ul>
+            <li>{{ t }}</li>
+        </ul>
+      </div>
+    }
+    
     </mat-card-content>
 </mat-card>
