@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
 
+export type PizzaTopping = {
+  checked: boolean;
+  name: string;
+  price: number;
+};
+
 const PIZZA_TOPPINGS = [
   {
     name: "Pepperoni",
@@ -19,5 +25,9 @@ const PIZZA_TOPPINGS = [
   providedIn: 'root',
 })
 export class PizzaService {
-  getPizzaToppings = () => PIZZA_TOPPINGS.map(topping => ({...topping, checked: false,}));
+  getPizzaToppings = (): PizzaTopping[] => {
+    const SHAPED_PIZZA_TOPPINGS = PIZZA_TOPPINGS.map(topping => ({...topping, checked: false,}));
+    return SHAPED_PIZZA_TOPPINGS;
+  }
 }
+ 
