@@ -5,6 +5,15 @@ appearance="outlined"
     <mat-card-title>Choose your pizza toppings...</mat-card-title>
   </mat-card-header>
   <mat-card-content>
+    <button 
+    matButton="outlined"
+    >
+        All
+    </button>
+    &nbsp;
+    <button matButton="outlined">
+        None
+    </button>
         @for (t of availablePizzaToppings(); track t) {
             <div>
                 <label>
