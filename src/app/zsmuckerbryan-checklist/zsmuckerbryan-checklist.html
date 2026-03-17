@@ -3,11 +3,27 @@
 >
     <mat-card-header>
         <mat-card-title>
-            Zac's Checklist Progress Component
+            Zac's Pizza Chef Checklist Progress Component
         </mat-card-title>
     </mat-card-header>
     <mat-card-content>
 
+    <button
+      matButton="outlined"
+      (click)="checkAll()"
+    >
+      Mark All Complete
+    </button>
+    &nbsp;
+    <button
+      matButton="outlined"
+      (click)="unCheckAll()"
+    >
+      Mark None Complete
+    </button>
+
+    <br>
+        
     @for (task of pizzaTasks(); track task.id) {
         <mat-checkbox
             [checked]="task.completed"

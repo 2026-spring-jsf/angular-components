@@ -1,6 +1,7 @@
 import { Component, signal, computed, inject } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import  { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,6 +10,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     MatCardModule,
     MatCheckboxModule,
+    MatButtonModule,
     CommonModule
   ],
   templateUrl: './zsmuckerbryan-checklist.html',
@@ -48,6 +50,24 @@ protected readonly toggleTask = (id: number) => this.pizzaTasks.update(
       : task
   )
 );
+
+protected readonly checkAll = () => this.pizzaTasks.update(
+    currentTasks => currentTasks.map(
+      task => ({
+        ...task,
+        completed: true,
+      })
+    )
+  );
+
+  protected readonly unCheckAll = () => this.pizzaTasks.update(
+    currentTasks => currentTasks.map(
+      task => ({
+        ...task,
+        completed: false,
+      })
+    )
+  );
 
 }
 
