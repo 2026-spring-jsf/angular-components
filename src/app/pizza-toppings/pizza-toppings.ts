@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PizzaService } from '../pizza.service';
 
 @Component({
   selector: 'app-pizza-toppings',
@@ -8,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class PizzaToppings {
 
+  private readonly pizzaSvc = inject(
+    PizzaService
+  );
+
+  protected readonly availablePizzaToppings = signal(
+    this.pizzaSvc.getAvailablePizzaToppings()
+  );
 }
