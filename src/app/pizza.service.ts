@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-export type PizzaToppings = {
+export type PizzaTopping = {
   name: string;
   price: number;
   checked: boolean;
@@ -25,7 +25,7 @@ const dummyToppingsFromApi = [
 })
 export class PizzaService {
   
-  getAvailablePizzaToppings = (): PizzaToppings[] => {
+  getAvailablePizzaToppings = (): PizzaTopping[] => {
     
   // Make the API call to get the pizza toppings...
 
