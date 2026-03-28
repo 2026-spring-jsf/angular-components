@@ -20,10 +20,12 @@
     <br />
     @for (t of availablePizzaToppings(); track t) {
       <div>
-        <label>
-          <input type="checkbox" [checked]="t.checked" (change)="toggleTopping(t)" />
+        <mat-checkbox
+          [checked]="t.checked" 
+          (change)="toggleTopping(t)"
+        >
           {{ t.name }} ({{ t.price | currency }})
-        </label>
+        </mat-checkbox>
       </div>
     }
     <h3>Total: {{ total() | currency }}</h3>

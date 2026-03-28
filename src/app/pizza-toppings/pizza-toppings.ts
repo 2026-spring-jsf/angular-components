@@ -3,13 +3,15 @@ import { PizzaService, PizzaTopping } from '../pizza.service';
 import { CurrencyPipe } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-pizza-toppings',
   imports: [
     CurrencyPipe,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule,
   ],
   templateUrl: './pizza-toppings.html',
   styleUrl: './pizza-toppings.css',

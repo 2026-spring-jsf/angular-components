@@ -1,0 +1,38 @@
+<mat-card
+    appearance="outlined"
+>
+    <mat-card-header>
+        <mat-card-title>Roll the dice</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+                <mat-label>Select 1 - 6 dice</mat-label>
+                <input matInput
+                    type=number
+                    id="numDice"
+                    name="numDice"
+                    placeholder="Number of Dice"
+                    min="1"
+                    max="6"
+                    value="1"
+                    (change)="updateDiceCount($event.target.value)"
+                >
+            </mat-form-field>
+        </form>
+        <br />
+        <button
+            matButton="outlined"
+            (click)="rollDice()"
+        >
+            Roll
+        </button>
+        <div id="diceContainer">
+        @for (roll of results(); track roll) {
+            <div class="die">
+                {{ roll.result || ""}}
+            </div>
+        }
+    </div>
+    </mat-card-content>
+</mat-card>
