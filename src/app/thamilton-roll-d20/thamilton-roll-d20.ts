@@ -16,16 +16,25 @@ export class ThamiltonRollD20 {
 
   protected readonly updateMultiplier = (num: string) => this.multiplier.set(Number(num));
 
-  protected readonly rollD20 = () => {
-    let sum = 0;
+  // As a single lambda expression, without `for` loop : - O
+  protected readonly rollD20 = () => this.result.set(
 
-    for (let i = 0; i < Number(this.multiplier()); i++) {
-      let roll = Math.floor(Math.random() * 20) + 1;
-      sum += roll;
-    }
+    // Create an array for the number of D20s
+    Array(this.multiplier()).fill(0)
 
-    this.result.set(sum);
-  };
+      // Transform that array to a random D20 roll for each "die"
+      .map(
+        x => Math.floor(Math.random() * 20) + 1
+      )
+
+      // Sum the rolls
+      .reduce(
+        (acc, x) => acc + x,
+        0,
+      )
+  );
+
+
 
   /*
   protected readonly numberOne = signal(2);
