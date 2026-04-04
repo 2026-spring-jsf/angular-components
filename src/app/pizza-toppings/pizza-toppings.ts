@@ -10,6 +10,7 @@ import { MatButton, MatButtonModule } from '@angular/material/button';
     CurrencyPipe,
     MatCardModule,
     MatButtonModule,
+    MatButton,
   ],
   templateUrl: './pizza-toppings.html',
   styleUrl: './pizza-toppings.css',
@@ -46,4 +47,21 @@ export class PizzaToppings {
     )
   );
 
+  protected readonly checkAll= () => this.availablePizzaToppings.update(
+    currentAvailablePizzaToppings => currentAvailablePizzaToppings.map(
+      topping => ({
+        ...topping,
+        checked: true,
+      })
+    )
+  );
+  
+  protected readonly unCheckAll= () => this.availablePizzaToppings.update(
+    currentAvailablePizzaToppings => currentAvailablePizzaToppings.map(
+      topping => ({
+        ...topping,
+        checked: false,
+      })
+    )
+  );
 }
