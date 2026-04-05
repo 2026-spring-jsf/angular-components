@@ -1,18 +1,18 @@
-<h2>Choose your pizza toppings...</h2>
+<mat-card appearance="outlined">
+    <mat-card-header>
+        <mat-card-title>Choose your pizza toppings...</mat-card-title>
+    </mat-card-header>
 
-@for (t of availablePizzaToppings(); track t) {
-    <div>
-        <label>
-            <input 
-                type="checkbox" 
-                [checked]="t.checked"
-                (change)="toggleTopping(t)"
-            />
-            {{ t.name }} ({{ t.price | currency }})
-        </label>
-    </div>
-}
+    <mat-card-content>
+        @for (t of availablePizzaToppings(); track t) {
+        <div>
+            <label>
+                <input type="checkbox" [checked]="t.checked" (change)="toggleTopping(t)" />
+                {{ t.name }} ({{ t.price | currency }})
+            </label>
+        </div>
+        }
 
-<h3>
-    Total: {{ total() | currency }}
-</h3>
+        <h3>Total: {{ total() | currency }}</h3>
+    </mat-card-content>
+</mat-card>
