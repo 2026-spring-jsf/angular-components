@@ -4,6 +4,9 @@
     </mat-card-header>
 
     <mat-card-content>
+        <button matButton="outlined">Select All</button>
+        <button matButton="outlined">Deselect All</button>
+
         @for (t of availablePizzaToppings(); track t) {
         <div>
             <label>

@@ -2,10 +2,11 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { PizzaService, PizzaTopping } from '../pizza.service';
 import { CurrencyPipe } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-pizza-toppings',
-  imports: [CurrencyPipe, MatCardModule],
+  imports: [CurrencyPipe, MatButtonModule, MatCardModule],
   templateUrl: './pizza-toppings.html',
   styleUrl: './pizza-toppings.css',
 })
