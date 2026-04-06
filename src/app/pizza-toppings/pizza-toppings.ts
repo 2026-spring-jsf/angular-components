@@ -1,8 +1,8 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { PizzaService, PizzaTopping } from '../pizza.service';
 import { CurrencyPipe } from '@angular/common';
-import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-pizza-toppings',
@@ -41,5 +41,23 @@ export class PizzaToppings {
         : x
     )
   );
+
+  protected readonly selectAll = () => this.availablePizzaToppings.update(
+    currentToppings => currentToppings.map(
+      topping => ({
+        ...topping,
+        checked: true,
+      })
+    )
+  )
+
+  protected readonly deselectAll = () => this.availablePizzaToppings.update(
+    currentToppings => currentToppings.map(
+      topping => ({
+        ...topping,
+        checked: false,
+      })
+    )
+  )
 
 }
