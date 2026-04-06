@@ -1,9 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { PizzaToppings } from './pizza-toppings/pizza-toppings';
+import { KnorbuTaxes } from './knorbu-taxes/knorbu-taxes';
 
 @Component({
   selector: 'app-root',
-  imports: [PizzaToppings],
+  imports: [
+    PizzaToppings,
+    KnorbuTaxes
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
