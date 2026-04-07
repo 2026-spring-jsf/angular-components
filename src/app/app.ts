@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { PizzaToppings } from './pizza-toppings/pizza-toppings';
+import { CsniderIncrementer } from "./csnider-incrementer/csnider-incrementer";
 
 @Component({
   selector: 'app-root',
-  imports: [PizzaToppings],
+  imports: [PizzaToppings, CsniderIncrementer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
