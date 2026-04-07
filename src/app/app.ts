@@ -23,7 +23,7 @@ import { KnorbuTaxes } from './knorbu-taxes/knorbu-taxes';
     LmeierCustomTopping,
     ThamiltonRollD20,
     DweiseClickCounter,
-        KnorbuTaxes
+    KnorbuTaxes
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
