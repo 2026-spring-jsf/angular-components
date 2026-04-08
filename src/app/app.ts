@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { PizzaToppings } from './pizza-toppings/pizza-toppings';
 import { CbaresDiceRoll } from './cbares-dice-roll/cbares-dice-roll';
+import { TsteeleAddition } from './tsteele-addition/tsteele-addition';
 import { TsteeleMultiplication } from './tsteele-multiplication/tsteele-multiplication';
 import { ZsmuckerbryanChecklist } from './zsmuckerbryan-checklist/zsmuckerbryan-checklist';
 import { MrooneyAddition } from './mrooney-addition/mrooney-addition';
@@ -19,6 +20,7 @@ import { DweiseClickCounter } from './dweise-click-counter/dweise-click-counter'
     TsteeleMultiplication,
     CbaresDiceRoll,
     ZsmuckerbryanChecklist,
+    TsteeleAddition,
     LmeierCustomTopping,
     ThamiltonRollD20,
     DweiseClickCounter
