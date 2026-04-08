@@ -1,0 +1,23 @@
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Magic 8 Ball</mat-card-title>
+  </mat-card-header>
+  
+  <mat-card-content>
+
+<mat-form-field appearance="fill">
+  <mat-label>Your Name</mat-label>
+  <input matInput [value]="userName" (input)="userName = $event.target.value" placeholder="Enter your name">
+</mat-form-field>
+
+<br>
+
+<button mat-raised-button (click)="askEightBall()">
+  Ask the 8 Ball
+</button>
+
+<h3>
+  {{ answer }}
+</h3>
+  </mat-card-content>
+</mat-card>
