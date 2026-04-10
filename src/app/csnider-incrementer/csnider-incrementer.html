@@ -1,0 +1,14 @@
+<mat-card appearance="outlined">
+    <mat-card-header>
+        <mat-card-title>Incrementer App</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div id="controls">
+            <input type="number" id="increment-by" (change)="setIncrement($event)" title="Increment By" value="{{increment()}}">
+            <button class="control-button" (click)="incrementCount()" id="add-button" title="Increment Count"><mat-icon>add</mat-icon></button>
+            <button class="control-button" (click)="decrementCount()" id="remove-button" title="Decrement Count"><mat-icon>remove</mat-icon></button>
+            <span id="current-count">Current Count: {{count()}}</span>
+            <button class="control-button" (click)="resetValues()" id="reset-button" title="Reset Count">Reset</button>
+        </div>
+    </mat-card-content>
+</mat-card>
