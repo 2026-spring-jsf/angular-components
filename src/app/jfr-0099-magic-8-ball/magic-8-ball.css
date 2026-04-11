@@ -1,0 +1,31 @@
+mat-card {
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+}
+
+.ball {
+  width: 200px;
+  height: 200px;
+  background: black;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.window {
+  width: 120px;
+  height: 120px;
+  background: #1a237e;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}

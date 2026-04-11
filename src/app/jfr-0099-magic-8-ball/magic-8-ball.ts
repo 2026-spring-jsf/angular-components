@@ -12,7 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './magic-8-ball.html',
   styleUrl: './magic-8-ball.css',
 })
-export class Magic8BallComponent {
+export class Magic8Ball {
 
   private readonly answers = [
     'It is certain',
