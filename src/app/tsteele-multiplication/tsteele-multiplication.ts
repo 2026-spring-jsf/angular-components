@@ -6,6 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-tsteele-multiplication',
+  standalone: true,
   imports: [
     MatCardModule,
     MatButtonModule,
