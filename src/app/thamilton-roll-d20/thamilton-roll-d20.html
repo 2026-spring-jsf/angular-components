@@ -1,0 +1,32 @@
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title> Xd20 Roller Component </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <br />
+    <mat-form-field>
+      <mat-label>How Many d20</mat-label>
+      <input matInput [value]="multiplier()" (input)="updateMultiplier($event.target.value)" />
+    </mat-form-field>
+    &nbsp;
+    <button matButton="outlined" (click)="rollD20()">Roll d20</button>
+    &nbsp;
+    {{ result() }}
+    <!--
+    <br /><br />
+    <mat-form-field>
+      <mat-label>Number One</mat-label>
+      <input matInput [value]="numberOne()" (input)="updateNumberOne($event.target.value)" />
+    </mat-form-field>
+    +
+    <mat-form-field>
+      <mat-label>Number Two</mat-label>
+      <input matInput [value]="numberTwo()" (input)="updateNumberTwo($event.target.value)" />
+    </mat-form-field>
+    &nbsp;
+    <button matButton="outlined" (click)="add()">=</button>
+    &nbsp;
+    {{ sum() }}
+    -->
+  </mat-card-content>
+</mat-card>

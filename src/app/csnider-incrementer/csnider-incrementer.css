@@ -1,0 +1,33 @@
+mat-card {margin-top: 20px;}
+
+#controls {margin-top: 20px;}
+
+mat-icon {padding-top: 1px;}
+
+.control-button {
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 8px;
+    height: 33px;
+    margin: 0 12px 2px 0;
+    vertical-align: middle;
+}
+
+.control-button:hover {background-color: #E6ECF5;}
+
+#add-button {color: green;} 
+
+#increment-by {
+    height: 24px;
+    margin: 6px 12px 0 0;
+    width: 75px;
+}
+
+#remove-button {color: red;}
+
+#current-count {margin: 0 85px 0 50px;}
+
+#reset-button {
+    color: blue;
+    padding: 0 10px;
+}
