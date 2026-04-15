@@ -9,6 +9,7 @@ import { ThamiltonRollD20 } from './thamilton-roll-d20/thamilton-roll-d20';
 import { DweiseClickCounter } from './dweise-click-counter/dweise-click-counter'
 import { KnorbuTaxes } from './knorbu-taxes/knorbu-taxes';
 import { CsniderIncrementer } from "./csnider-incrementer/csnider-incrementer";
+import { Jfr0099Magic8Ball } from './jfr-0099-magic-8-ball/jfr-0099-magic-8-ball';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,8 @@ import { CsniderIncrementer } from "./csnider-incrementer/csnider-incrementer";
     ThamiltonRollD20,
     DweiseClickCounter,
     KnorbuTaxes,
-    CsniderIncrementer
+    CsniderIncrementer,
+    Jfr0099Magic8Ball
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',

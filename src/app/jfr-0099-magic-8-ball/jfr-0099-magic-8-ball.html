@@ -1,0 +1,26 @@
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Magic 8‑Ball</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="ball">
+      <div class="window">
+        @if (!result()) {
+          <p>Ask a question...</p>
+        } @else {
+          <p>{{ result() }}</p>
+        }
+      </div>
+    </div>
+
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="shake()"
+    >
+      Shake 8‑Ball
+    </button>
+  </mat-card-content>
+</mat-card>
+
