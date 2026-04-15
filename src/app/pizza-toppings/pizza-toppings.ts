@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { PizzaService, PizzaTopping } from '../pizza.service';
 import { CurrencyPipe } from '@angular/common';
 
@@ -12,6 +12,13 @@ export class PizzaToppings {
   private readonly pizzaSvc = inject(PizzaService);
 
   protected readonly availablePizzaToppings = signal(this.pizzaSvc.getAvailablePizzaToppings());
+
+  protected readonly total = computed(() =>
+    this.availablePizzaToppings()
+      .filter((x) => x.checked)
+      .reduce((acc, x) => acc + x.price, 0),
+  );
+
   protected readonly toggleTopping = (t: PizzaTopping) =>
     this.availablePizzaToppings.update((prev) =>
       prev.map((x) =>
