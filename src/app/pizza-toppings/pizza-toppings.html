@@ -1,19 +1,9 @@
 <h2>Choose your pizza Toppings..</h2>
-<div>
-  <label>
-    <input type="checkbox" />
-    Pepperoni ($3.50)
-  </label>
-</div>
-<div>
-  <label>
-    <input type="checkbox" />
-    Suasage ($4.25)
-  </label>
-</div>
-<div>
-  <label>
-    <input type="checkbox" />
-    Extra Cheese ($0.99)
-  </label>
-</div>
+@for (t of availablePizzaToppings(); track t) {
+  <div>
+    <label>
+      <input type="checkbox" />
+      {{ t.name }} ({{ t.price }})
+    </label>
+  </div>
+}
