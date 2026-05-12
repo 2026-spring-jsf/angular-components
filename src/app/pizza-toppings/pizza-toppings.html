@@ -1,6 +1,7 @@
 <mat-card appearance="outlined">
   <mat-card-header>
     <mat-card-title> Choose your pizza toppings... </mat-card-title>
+    </mat-card-header>
     <mat-card-content>
       @for (t of availablePizzaToppings(); track t) {
         <div>
@@ -12,5 +13,4 @@
       }
       <h3>Total: {{ total() | currency }}</h3>
     </mat-card-content>
-  </mat-card-header>
 </mat-card>
